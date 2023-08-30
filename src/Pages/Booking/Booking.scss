@@ -1,0 +1,63 @@
+@import "../../Components/config";
+
+#Booking {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../../Components/Group100.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#Booking_Form {
+    height: 70%;
+    width: 60%;
+    background: rgba($color: #000000, $alpha: 0.2);
+    border-radius: 25px;
+    &_Questions {
+        width: 100%;
+        height: 80%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    } 
+    &_Btn {
+        @include Button;
+        margin: auto;
+        padding: 15px;
+    }
+    &_Btn:hover {
+        @include Button_Hover;
+    }
+}
+.Questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    label {
+        font-size: 32px;
+        font-weight: 600;
+        font-family: "Markazi_Text";
+        color: $MainColor;
+    }
+    input {
+        margin: 20px;
+        width: 60%;
+        @include Paragraph;
+        padding: 10px 20px;
+        border: 5px solid $SecondaryColor;
+        border-radius: 25px;
+        text-align: center;
+    }
+    select {
+        margin: 20px;
+        width: 60%;
+        @include Paragraph;
+        padding: 10px 20px;
+        border: 5px solid $SecondaryColor;
+        border-radius: 25px;
+        background: white;
+        text-align: center;
+    }
+
+}

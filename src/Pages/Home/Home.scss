@@ -1,0 +1,167 @@
+@import "../../Components/config";
+
+#Home {
+    background-image: url("../../Components/Group99.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+}
+#Home_First {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 80px auto 40px;
+    &_Info {
+        width: 40%;
+        margin: auto;
+        h4 {
+            @include Title;
+            margin-bottom: 2.5%;
+        }
+        p {
+            @include Paragraph;
+            margin-bottom: 10%;
+        }
+        button {
+            @include Button;
+            margin-left: 1%;
+            padding: 10px;
+        }
+        button:hover {
+            @include Button_Hover;
+        }
+    }
+    &_Image {
+        width: 50%;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#Home_Second {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 80px auto;
+    &_Image {
+        border:25px solid $SecondaryColor;
+        border-radius: 100%;
+        width: 40%;
+        text-align: center;
+        z-index: 5;
+        img {
+            width: 100%;
+        }
+    }
+    &_Info {
+        position: absolute;
+        left: 20%;
+        width: 75%;
+        background-color: #EDEFEE;
+        z-index: 4;
+        text-align: right;
+        h4 {
+            @include OverTitle;
+            width: 10%;
+            margin-left: 82%;
+            margin-top: 50px
+
+        }
+        h3 {
+            @include SubTitle;
+            width: 30%;
+            margin-left: 63%;
+        }
+        p {
+            @include Paragraph;
+            width: 60%;
+            margin-left: 33%;
+        }
+        button {
+            @include Button;
+            padding: 10px;
+            margin-left: 70%;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+        button:hover {
+            @include Button_Hover;
+        }
+    }
+}
+
+#Home_Third {
+    margin: 30px auto;
+    h4{
+        @include OverTitle;
+        text-align: center;
+    }
+    h3{
+        @include SubTitle;
+        text-align: center;
+    }
+    &_Options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        margin: 30px auto;
+
+        p {
+            font-size: 25px;
+            padding: 5px 15px;
+            font-weight: 400;
+            font-family: "Markazi_Text";
+            color: $MainColor;
+            background: $SecondaryColor;
+            border: 3px solid $MainColor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+    }
+    &_Cards {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 50px auto 80px ;
+    }
+    &_Btns{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        margin: auto;
+        button{
+        @include Button;
+        padding: 10px;
+        }
+    }
+
+}
+
+#Home_Fourth {
+    width: 80%;
+    margin: 80px auto;
+    text-align: center;
+    h4 {
+        @include OverTitle
+    }
+    h3 {
+        @include SubTitle
+    }
+    &_Opinins {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+

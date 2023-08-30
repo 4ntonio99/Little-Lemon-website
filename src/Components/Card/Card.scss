@@ -1,0 +1,34 @@
+@import "..//../Components/config";
+#Card {
+    &_Img {
+        width: 80%;
+        margin-left: 10%;
+    }
+    &_Info {
+        width: 90%;
+        margin-left: 5%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        p{
+            grid-column: 1 / 3;
+            grid-row: 1;
+            @include Paragraph;
+
+        }
+        img{
+            grid-column: 1 / 3;
+            grid-row: 2;
+        }
+        div{
+            grid-column: 3;
+            grid-row: 1 /3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            background-color: $MainColor;
+            color: white;
+            cursor: pointer;
+        }
+    } 
+}

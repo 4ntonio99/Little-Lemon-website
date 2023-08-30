@@ -1,0 +1,61 @@
+//Fonts
+@font-face {
+    font-family: 'Markazi_Text';
+    src: url('../../public/Resources/MarkaziText-VariableFont_wght.ttf');
+}
+
+//Variables 
+$MainColor: #495E57;
+$SecondaryColor: #F4CE14;
+$ThirdColor: #EE9972;
+$BackgroundColor: #FFFFFF;
+
+//Mixins
+@mixin Title () {
+    font-size: 96px;
+    font-weight: 400;
+    font-family: "Markazi_Text";
+    color: $MainColor;
+}
+
+@mixin SubTitle () {
+    font-size: 64px;
+    font-weight: 600;
+    font-family: "Markazi_Text";
+    color: $MainColor;
+}
+
+@mixin OverTitle () {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: "Markazi_Text";
+    color: $ThirdColor;
+}
+
+@mixin Paragraph () {
+    font-size: 24px;
+    font-weight: normal;
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+}
+
+@mixin Button () {
+    font-size: 36px;
+    font-weight: 400;
+    font-family: "Markazi_Text";
+    color: $MainColor;
+    background: $SecondaryColor;
+    border: 3px solid $MainColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+@mixin Button_Hover () {
+    color: $SecondaryColor;
+    background: $MainColor;
+    border: 3px solid $SecondaryColor;
+
+}
